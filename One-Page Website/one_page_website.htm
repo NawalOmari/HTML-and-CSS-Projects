@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/one_page_website.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/> 
     <title>One Page Website</title>
-    <style>
+    
+<!--    <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -37,6 +40,7 @@
             width: 100%;
         }
     </style>
+-->
 </head>
 <body>
     <nav>
@@ -48,17 +52,78 @@
     
     <section id="home">
         <h1>Welcome to My Website</h1>
-        <p>This is a simple one-page website created using HTML.</p>
+        <p>This is a simple one-page website created using HTML, CSS and JAVASCRIPT.</p>
     </section>
-    
-    <section id="gallery">
-        <h2>Gallery</h2>
-        <img src="Images/Hakone.jpeg" alt="Hakone">
-        <img src="Images/Kyoto.jpeg" alt="Kyoto">
-        <img src="Images/Mt Fuji Hakone.jpeg" alt="Mt Fuji Hakone">
-        <img src="Images/Osaka.jpeg" alt="Osaka">
-    </section>
-    
+
+    <!-- Images used to open the lightbox -->
+<div class="row">
+    <div class="column">
+      <img src="Images/plant1-small.png" onclick="openModal();currentSlide(1)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="Images/plant2-small.png" onclick="openModal();currentSlide(2)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="Images/plant3-small.png" onclick="openModal();currentSlide(3)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="Images/plant4-small.png" onclick="openModal();currentSlide(4)" class="hover-shadow">
+    </div>
+  </div>
+  
+  <!-- The Modal/Lightbox -->
+  <div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+  
+      <div class="mySlides">
+        <div class="numbertext">1 / 4</div>
+        <img src="Images/plant1.png" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">2 / 4</div>
+        <img src="Images/plant2.png" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">3 / 4</div>
+        <img src="Images/plant3.png" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">4 / 4</div>
+        <img src="Images/plant4.png" style="width:100%">
+      </div>
+  
+      <!-- Next/previous controls -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+      <!-- Caption text -->
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+  
+      <!-- Thumbnail image controls -->
+      <div class="column">
+        <img class="demo" src="Images/plant1-small.png" onclick="currentSlide(1)" alt="Plant 1">
+      </div>
+  
+      <div class="column">
+        <img class="demo" src="Images/plant2-small.png" onclick="currentSlide(2)" alt="Plant 2">
+      </div>
+  
+      <div class="column">
+        <img class="demo" src="Images/plant3-small.png" onclick="currentSlide(3)" alt="Plant 3">
+      </div>
+  
+      <div class="column">
+        <img class="demo" src="Images/plant4-small.png" onclick="currentSlide(4)" alt="Plant 4">
+      </div>
+    </div>
+  </div>
+ <!--   
     <section id="contact">
         <h2>Contact Us</h2>
         <form>
@@ -71,6 +136,7 @@
             <input type="submit" value="Send">
         </form>
     </section>
+-->
     
     <section id="video">
         <h2>Featured Video</h2>
